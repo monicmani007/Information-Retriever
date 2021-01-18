@@ -49,7 +49,7 @@ def main():
 
 def load_files(directory):
     """
-    Given a directory name, return a dictionary mapping the filename of each
+    Given a directory name, return's a dictionary mapping the filename of each
     `.txt` file inside that directory to the file's contents as a string.
     """
     files = dict()
@@ -62,10 +62,10 @@ def load_files(directory):
 
 def tokenize(document):
     """
-    Given a document (represented as a string), return a list of all of the
+    Given a document (represented as a string), return's a list of all of the
     words in that document, in order.
 
-    Process document by coverting all words to lowercase, and removing any
+    Process document by coverting all words to lowercase, and removes any
     punctuation or English stopwords.
     """
 
@@ -91,9 +91,9 @@ def tokenize(document):
 def compute_idfs(documents):
     """
     Given a dictionary of `documents` that maps names of documents to a list
-    of words, return a dictionary that maps words to their IDF values.
+    of words, return's a dictionary that maps words to their IDF values.
 
-    Any word that appears in at least one of the documents should be in the
+    Any word that appears in at least one of the documents will be in the
     resulting dictionary.
     """
     words = set()
@@ -112,7 +112,7 @@ def top_files(query, files, idfs, n):
     """
     Given a `query` (a set of words), `files` (a dictionary mapping names of
     files to a list of their words), and `idfs` (a dictionary mapping words
-    to their IDF values), return a list of the filenames of the the `n` top
+    to their IDF values), return's a list of the filenames of the the `n` top
     files that match the query, ranked according to tf-idf.
     """
     file_freq = dict()
@@ -164,8 +164,8 @@ def top_sentences(query, sentences, idfs, n):
     """
     Given a `query` (a set of words), `sentences` (a dictionary mapping
     sentences to a list of their words), and `idfs` (a dictionary mapping words
-    to their IDF values), return a list of the `n` top sentences that match
-    the query, ranked according to idf. If there are ties, preference should
+    to their IDF values), return's a list of the `n` top sentences that match
+    the query, ranked according to idf. If there are ties, preference will
     be given to sentences that have a higher query term density.
     """
     value = dict()
